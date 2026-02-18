@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main()
+{
+	int rows, columns;
+printf("Enter the number of rows:\n");
+	scanf("%d", &rows);
+printf("Enter the number of columns:\n");
+	scanf("%d", &columns);
+int arr[rows][columns];
+printf("Enter the elements of the array:\n");
+for(int i = 0; i < rows; i++)
+	{
+		for(int j = 0; j < columns; j++)
+		{
+scanf("%d", &arr[i][j]);
+		}
+	}
+for(int i = 0; i < rows; i++)
+	{
+		int max = arr[i][0];
+for(int j = 0; j < columns; j++)
+		{
+			if(arr[i][j] > max)
+			{
+				max = arr[i][j];
+			}
+		}
+printf("Maximum element in row %d = %d\n", i + 1, max);
+	}
+return 0;
+}
